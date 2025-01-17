@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  padding: 0 10px; /* Añadimos padding para evitar que el contenido se toque con los bordes */
+  overflow-x: hidden; /* Evitamos el desbordamiento horizontal */
+}
+
+.App {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Aseguramos que el padding se incluya en el ancho total */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.weather-card img,
+.forecast-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-container {
+  margin-top: 20px;
+}
+
+.forecast-cards {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en varias filas */
+  justify-content: space-between;
+}
+
+.forecast-card {
+  flex: 1 1 calc(50% - 10px); /* Hacer que cada tarjeta ocupe aproximadamente el 50% del ancho disponible */
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .forecast-card {
+    flex: 1 1 100%; /* En pantallas pequeñas, hacer que cada tarjeta ocupe el 100% del ancho */
+  }
+}
